@@ -1,0 +1,77 @@
+"Invert yank
+nnoremap y Y
+nnoremap Y y
+
+"Faster scroll
+nnoremap j 4j
+nnoremap k 4k
+
+"Toggle private mode
+nmap <Leader>p :winopen -private<CR>
+
+"Toggle fulscreen mode
+nmap <Leader>f :set fullscreen!<CR>
+
+"Toggle download list
+nmap <Leader>d :downloads<CR>
+
+"Toggle private mode
+nmap <Leader>p :winopen -private<CR>
+
+nmap s :open google
+nmap S :tabopen google
+
+"Swap zoom keys
+nnoremap zi ZI
+nnoremap zm ZM
+nnoremap zo ZO
+nnoremap zr ZR
+nnoremap zz zZ
+nnoremap ZI zi
+nnoremap ZM zm
+nnoremap ZO zo
+nnoremap ZR zr
+nnoremap zZ zz
+
+set hintchars=asdfg;lkjh
+set visualbell=true
+set showstatuslinks=1
+set status=input,location,bookmark,history,tabcount,position,ssl
+style! chrome://* statuspanel[type="overLink"] { display: none !important; }
+set toolbars=none
+colorscheme solarized
+
+js << EOF
+function toggle_bar(b) {
+	var elem = document.getElementById(b);
+	if (!elem)
+		return;
+	window.setToolbarVisibility(elem, elem.collapsed);
+}
+EOF
+
+js << EOF
+function toggle_bottombar(p) {
+	var bb = document.getElementById('liberator-bottombar');
+	if (!bb)
+		return;
+	if (window.fullScreen) {
+		bb.style.height = '0px';
+		bb.style.overflow = 'hidden';
+	}
+	else {
+		bb.style.height = '';
+		bb.style.overflow = '';
+	}
+}
+toggle_bottombar()
+EOF
+
+nmap <Leader>u :js toggle_bar('nav-bar')<CR>
+nmap <Leader>m :js toggle_bar('toolbar-menubar')<CR>
+nmap <Leader>b :js toggle_bar('PersonalToolbar')<CR>
+nmap <Leader>t :js toggle_bar('TabsToolbar')<CR>
+
+autocmd Fullscreen .* :js toggle_bottombar()
+
+" vim: set ft=vimperator:

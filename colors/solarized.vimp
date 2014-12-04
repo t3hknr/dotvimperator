@@ -1,0 +1,41 @@
+hi clear
+
+hi -a Hint font-family: Monaco !important;
+
+hi Hint -a color: #002b36 !important; outline: 1px solid rgba(0, 43, 54, .1); background: rgba(253, 246, 227, .8);
+hi HintElem color: #002b36 !important; background-color: #268bd2 !important;
+hi HintActive color: #002b36 !important; background-color: #d33682 !important;
+
+hi Boolean color: #dc322f !important;
+hi Function color: #2aa198 !important;
+hi Null color: #268bd2 !important;
+hi Number color: #268bd2 !important;
+hi Object color: #6c71c4 !important;
+hi String color: #859900 !important;
+hi Enabled color: #268bd2 !important;
+hi Disabled color: #93a1a1 !important;
+hi Normal color: #657b83 !important; background-color: #fdf6e3 !important;
+hi ErrorMsg color: #657b83 !important; background-color: #dc322f !important;
+hi InfoMsg color: #839496 !important; background-color: #002b36 !important;
+hi LineNr color: #cb4b16 !important; background-color: #fdf6e3 !important;
+hi ModeMsg color: #657b83 !important; background-color: #fdf6e3 !important; margin-right: 8px;
+hi MoreMsg color: #859900 !important;
+hi NonText color: #268bd2 !important;
+hi Preview color: #93a1a1 !important;
+hi Question color: #859900 !important; background-color: #fdf6e3 !important;
+hi WarningMsg color: #d33682 !important; background-color: #fdf6e3 !important;
+hi CompTitle color: #dc322f !important; background-color: #fdf6e3 !important;
+hi CompDesc color: #93a1a1 !important;
+hi CompItem[selected] color: #fdf6e3 !important; background-color: #b58900 !important;
+hi Indicator color: #268bd2 !important;
+hi Keyword color: #dc322f !important;
+hi Tag color: #268bd2 !important;
+hi Title color: #dc322f !important;
+hi URL color: #859900 !important;
+hi FrameIndicator background-color: #dc322f !important;
+hi Bell background-color: #002b36 !important;
+hi CmdLine color: #657b83 !important; background-color: #fdf6e3 !important;
+hi StatusLine color: #839496 !important; background-color: #002b36 !important; margin-top: -2px; margin-bottom: -2px; margin-left: -8px; height: 22px; padding-top: 2px; border-style: none;
+hi ContentSeparator display: none;
+
+" vim: fdm=marker
