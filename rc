@@ -18,8 +18,10 @@ nmap <Leader>d :downloads<CR>
 "Toggle private mode
 nmap <Leader>p :winopen -private<CR>
 
-nmap s :open google
-nmap S :tabopen google
+nmap <silent> <Leader>; :nohl<CR>
+
+nmap s :open google 
+nmap S :tabopen google 
 
 "Swap zoom keys
 nnoremap zi ZI
