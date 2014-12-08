@@ -43,6 +43,12 @@ style! chrome://* statuspanel[type="overLink"] { display: none !important; }
 set toolbars=none
 colorscheme solarized
 
+command proxyoff :set! network.proxy.type=0
+command proxyon :set! network.proxy.type=1
+command proxyauto :set! network.proxy.type=2
+command proxyautodetect :set! network.proxy.type=4
+command proxysystem :set! network.proxy.type=5
+
 js << EOF
 function toggle_bar(b) {
 	var elem = document.getElementById(b);
